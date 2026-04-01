@@ -132,7 +132,7 @@ function App() {
             <div className="glass rounded-xl p-8">
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
                 I'm a passionate developer with expertise in building modern web applications. 
-                With a strong foundation in both front-end and back-end technologies, 
+                With a good foundation in both front-end and back-end technologies, 
                 I create seamless user experiences that drive business value.
               </p>
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
