@@ -20,7 +20,15 @@ export const projects = [
     description: "A data-driven industrial platform aimed at bridging the 500,000 metric ton supply deficit in Nigeria's palm oil industry through sustainable innovation.",
     tags: ["HTML5", "CSS3", "JavaScript", "AgroTech", "Data Visualization"],
     link: "https://joexseven7.github.io/Oilreachproject/index.html"
-  }
+  },
+
+  {
+    id: 4,
+    title: "MVUSA Website (WordPress)",
+    description: "Designed and developed a professional website for MVUSA using WordPress, featuring responsive design, custom theme development, and optimized performance for better user experience.",
+    tags: ["WordPress", "PHP", "HTML5", "CSS3"],
+    link: "https://mvusa.com.ng/"
+  },
 // {
 //     id: 3,
 //     title: "Weather Dashboard",

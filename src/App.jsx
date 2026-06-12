@@ -92,8 +92,10 @@ function App() {
                 Full-Stack Developer
               </h1>
               <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl">
-                I build beautiful, functional, and user-centered web applications. 
-                Passionate about creating elegant solutions to complex problems.
+              I build websites and web applications because I believe technology should serve people, not the other way around. 
+              When I look at a project, I'm not just thinking about clean code or elegant architecture I'm imagining how someone will actually interact with it. 
+              Will they find what they need quickly? Will they enjoy using it? Will it make their day a little bit easier or better? 
+              Those questions drive me to create solutions that are as thoughtful and user-centered as they are technically sound.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <button 
@@ -114,7 +116,7 @@ function App() {
               <div className="relative w-64 h-64 sm:w-80 sm:h-80">
                 <div className="absolute inset-0 bg-blue rounded-full opacity-20 "></div>
                 <img 
-                  src="/profile.jpg" 
+                  src="/joshua.png" 
                   alt="Profile" 
                   className="w-full h-full object-cover rounded-full border border-blue-500 shadow-xl object-bottom"
                 />
@@ -228,7 +230,7 @@ function App() {
             </a>
             {/* Email */}
             <a 
-              href="/" 
+              href="johnjoshuaaaaaa@gmail.com" 
               className="glass rounded-xl p-6 flex items-center gap-4 hover:scale-105 transition-transform"
             >
               <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center">

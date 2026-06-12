@@ -21,6 +21,8 @@ const ProjectCard = ({ project }) => {
       </div>
       <a
         href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"      
         className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
       >
         View Project
