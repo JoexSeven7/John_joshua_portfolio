@@ -2,18 +2,23 @@ import React from 'react';
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="glass rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl cursor-pointer group">
-      <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-100 group-hover:text-blue-500 transition-colors">
+    <div className="feature-card group rounded-3xl p-6 bg-white/80 dark:bg-slate-900/70 border border-white/10 shadow-xl">
+      <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-5">
+        <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+      </div>
+      <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blue-400 transition-colors">
         {project.title}
       </h3>
-      <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm leading-relaxed">
+      <p className="text-slate-600 dark:text-slate-300 mb-5 text-sm leading-relaxed">
         {project.description}
       </p>
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-2 mb-6">
         {project.tags.map((tag, index) => (
           <span
             key={index}
-            className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300"
+            className="px-3 py-1 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-300"
           >
             {tag}
           </span>
@@ -22,8 +27,8 @@ const ProjectCard = ({ project }) => {
       <a
         href={project.link}
         target="_blank"
-        rel="noopener noreferrer"      
-        className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+        rel="noopener noreferrer"
+        className="inline-flex items-center text-sm font-bold text-blue-500 hover:text-blue-400 transition-colors"
       >
         View Project
         <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
