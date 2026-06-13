@@ -59,6 +59,35 @@ export const projects = [
 //   }
 ];
 
+export const experience = [
+  {
+    id: 1,
+    company: "Cecure Intelligence Limited",
+    role: "Frontend Developer",
+    dates: "2025 - Present",
+    location: "Hybrid",
+    responsibilities: [
+      "QA testing and frontend framework solidification.",
+      "Deep codebase study and analysis."
+    ]
+  }
+];
+
+export const education = [
+  {
+    id: 1,
+    institution: "YabaTech",
+    degree: "Architecture",
+    field: "Architecture"
+  },
+  {
+    id: 2,
+    institution: "BYU-Idaho",
+    degree: "Software Development",
+    field: "Applied Science"
+  }
+];
+
 export const skills = [
   { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
   { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },

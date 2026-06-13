@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import ProjectCard from './components/ProjectCard';
-import { projects, skills } from './data/projects';
+import { education, experience, projects, skills } from './data/projects';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -42,6 +42,8 @@ function App() {
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollToSection('hero')} className="text-slate-600 dark:text-slate-300 hover:text-blue-500 transition-colors">Home</button>
               <button onClick={() => scrollToSection('about')} className="text-slate-600 dark:text-slate-300 hover:text-blue-500 transition-colors">About</button>
+              <button onClick={() => scrollToSection('experience')} className="text-slate-600 dark:text-slate-300 hover:text-blue-500 transition-colors">Experience</button>
+              <button onClick={() => scrollToSection('education')} className="text-slate-600 dark:text-slate-300 hover:text-blue-500 transition-colors">Education</button>
               <button onClick={() => scrollToSection('projects')} className="text-slate-600 dark:text-slate-300 hover:text-blue-500 transition-colors">Projects</button>
               <button onClick={() => scrollToSection('skills')} className="text-slate-600 dark:text-slate-300 hover:text-blue-500 transition-colors">Skills</button>
               <button onClick={() => scrollToSection('contact')} className="text-slate-600 dark:text-slate-300 hover:text-blue-500 transition-colors">Contact</button>
@@ -167,6 +169,68 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-20 bg-slate-50 dark:bg-slate-800/50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-slate-800 dark:text-white text-center mb-4">Work Experience</h2>
+          <p className="text-slate-600 dark:text-slate-300 text-center mb-12 max-w-2xl mx-auto">
+            Professional experience building and improving frontend products.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {experience.map((job) => (
+              <div key={job.id} className="glass rounded-xl p-6 hover:scale-[1.02] transition-transform">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+                  <div>
+                    <p className="text-blue-500 font-medium mb-1">{job.company}</p>
+                    <h3 className="text-xl font-bold text-slate-800 dark:text-white">{job.role}</h3>
+                  </div>
+                  <span className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 w-fit">
+                    {job.dates}
+                  </span>
+                </div>
+                <p className="text-slate-600 dark:text-slate-300 mb-4">{job.location}</p>
+                <ul className="space-y-2">
+                  {job.responsibilities.map((responsibility, index) => (
+                    <li key={index} className="flex gap-3 text-slate-600 dark:text-slate-300">
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
+                      <span>{responsibility}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-slate-800 dark:text-white text-center mb-4">Educational Background</h2>
+          <p className="text-slate-600 dark:text-slate-300 text-center mb-12 max-w-2xl mx-auto">
+            My academic foundation across architecture and software development.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {education.map((item) => (
+              <div key={item.id} className="glass rounded-xl p-6 hover:scale-[1.02] transition-transform">
+                <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-3.004 12.078 12.078 0 01.665-6.479L12 14z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-1">{item.institution}</h3>
+                <p className="text-blue-500 font-medium mb-2">{item.degree}</p>
+                <p className="text-slate-600 dark:text-slate-300">{item.field}</p>
+                {item.description && (
+                  <p className="text-slate-600 dark:text-slate-300 mt-3">{item.description}</p>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
