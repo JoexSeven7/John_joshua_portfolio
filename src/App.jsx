@@ -148,7 +148,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-slate-950 pt-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.18),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(14,165,233,0.16),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(99,102,241,0.14),transparent_35%)]"></div>
         <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(59,130,246,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.8)_1px,transparent_1px)] bg-[size:56px_56px]"></div>
         <div className="hero-orbit absolute -top-12 -left-12 w-72 h-72 rounded-full bg-blue-500/20 blur-3xl"></div>
@@ -225,9 +225,13 @@ function App() {
 
                 <div className="hero-orbit hero-orbit-delayed relative z-10 w-full h-full rounded-full border border-blue-500 shadow-[0_0_80px_rgba(59,130,246,0.35)] overflow-hidden">
                   <img 
-                    src="/joshua.png" 
+                    src="/joshua-900.webp"
+                    srcSet="/joshua-480.webp 480w, /joshua-900.webp 900w, /joshua-1200.webp 1200w"
+                    sizes="(max-width: 1024px) 80vw, 420px"
                     alt="Profile" 
                     className="w-full h-full object-cover object-bottom"
+                    decoding="async"
+                    fetchPriority="high"
                   />
                 </div>
 
