@@ -1,13 +1,7 @@
 export const projects = [
+  
   {
     id: 1,
-    title: "Agency Website (MAGE Global)",
-    description: "Built a responsive digital agency platform, Showcased services in graphic design, UI/UX, and software development also Delivered clean navigation, interactive features,and modern UI elements.",
-    tags: ["React.js", "vanilla CSS"],
-    link: "https://mage-global.netlify.app/"
-  },
-  {
-    id: 2,
     title: "Realestate Website (ATHARRYS properties limited)",
     description: "Designed and developed Realestate,integrated product details, selection, purchase flow, Created reusable components for scalability and purchase flow.",
     tags: ["HTML", "Tailwind CSS", "JavaScript"],
@@ -15,7 +9,7 @@ export const projects = [
   },
 
   {
-    id: 3,
+    id: 2,
     title: "The Red Gold Hub",
     description: "A data-driven industrial platform aimed at bridging the 500,000 metric ton supply deficit in Nigeria's palm oil industry through sustainable innovation.",
     tags: ["HTML5", "CSS3", "JavaScript", "AgroTech", "Data Visualization"],
@@ -23,11 +17,19 @@ export const projects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "MVUSA Website (WordPress)",
     description: "Designed and developed a professional website for MVUSA using WordPress, featuring responsive design, custom theme development, and optimized performance for better user experience.",
     tags: ["WordPress", "PHP", "HTML5", "CSS3"],
     link: "https://mvusa.com.ng/"
+  },
+
+  {
+    id: 4,
+    title: "Agency Website (MAGE Global)",
+    description: "Built a responsive digital agency platform, Showcased services in graphic design, UI/UX, and software development also Delivered clean navigation, interactive features,and modern UI elements.",
+    tags: ["React.js", "vanilla CSS"],
+    link: "https://mage-global.netlify.app/"
   },
 // {
 //     id: 3,
