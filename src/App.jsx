@@ -168,7 +168,7 @@ function App() {
               </h1>
 
               <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-4 max-w-2xl mx-auto lg:mx-0">
-                I'm John Joshua, a Full-Stack Developer who turns ideas into clean, responsive, and user-friendly digital experiences.
+                I'm John Joshua, a Frontend Developer who turns ideas into clean, responsive, and user-friendly digital experiences.
               </p>
 
               <p className="text-base text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0">
