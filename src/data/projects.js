@@ -76,14 +76,14 @@ export const experience = [
 export const education = [
   {
     id: 1,
-    institution: "YabaTech",
-    degree: "Architecture",
-    field: "Architecture"
+    institution: "Yaba College of Technology (YABATECH) – Lagos, Nigeria",
+    degree: "Higher National Diploma (HND) in Architecture",
+    field: "Engineering & Construction"
   },
   {
     id: 2,
-    institution: "BYU-Idaho",
-    degree: "Software Development",
+    institution: "Brigham Young University - Idaho (BYU-Idaho) – Rexburg, USA",
+    degree: "Bachelor of Applied Science (BASc) in Software Development",
     field: "Applied Science"
   }
 ];

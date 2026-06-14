@@ -401,7 +401,7 @@ function App() {
           <div className="feature-card glass rounded-3xl p-8 mt-6 text-center">
             <p className="text-sm uppercase tracking-[0.2em] text-blue-500 font-bold mb-3">Field of Study</p>
             <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-white">
-              Architecture & Applied Science → Software Development
+              Architectural_technology & Applied_Science → Software Development
             </h3>
           </div>
         </div>
