@@ -44,11 +44,11 @@ function App() {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/70 dark:border-slate-800/70 bg-white/80 dark:bg-slate-950/75 backdrop-blur-xl shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/70 dark:border-slate-800/70 bg-white/60 dark:bg-slate-950/75 backdrop-blur-xl shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <button onClick={() => scrollToSection('hero')} className="nav-brand group flex items-center gap-3" aria-label="Go to home">
-              <div className="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/25">
+              <div className="relative w-11 h-11 rounded-2xl bg-linear-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/25">
                 <span className="absolute inset-0 rounded-2xl bg-white/20 group-hover:scale-110 transition-transform"></span>
                 <span className="relative text-white font-black">JJ</span>
               </div>
@@ -150,7 +150,7 @@ function App() {
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-slate-950 pt-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.18),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(14,165,233,0.16),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(99,102,241,0.14),transparent_35%)]"></div>
-        <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(59,130,246,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.8)_1px,transparent_1px)] bg-[size:56px_56px]"></div>
+        <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(59,130,246,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.8)_1px,transparent_1px)] bg-size-[56px_56px]"></div>
         <div className="hero-orbit absolute -top-12 -left-12 w-72 h-72 rounded-full bg-blue-500/20 blur-3xl"></div>
         <div className="hero-orbit hero-orbit-delayed absolute -right-20 top-24 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl"></div>
         <div className="hero-orbit absolute bottom-16 left-1/4 w-96 h-96 rounded-full bg-indigo-500/20 blur-3xl"></div>
@@ -221,7 +221,7 @@ function App() {
                 <div className="absolute inset-8 rounded-full border border-blue-500/30"></div>
                 <div className="absolute inset-0 rounded-full border border-dashed border-cyan-400/30 animate-[spin_18s_linear_infinite]"></div>
                 <div className="absolute -top-2 left-1/2 w-5 h-5 rounded-full bg-blue-500 shadow-lg shadow-blue-500/40"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-full blur-2xl"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-blue-500/20 to-indigo-500/20 rounded-full blur-2xl"></div>
 
                 <div className="hero-orbit hero-orbit-delayed relative z-10 w-full h-full rounded-full border border-blue-500 shadow-[0_0_80px_rgba(59,130,246,0.35)] overflow-hidden">
                   <img 
@@ -264,7 +264,7 @@ function App() {
           <div className="grid lg:grid-cols-5 gap-6 items-stretch">
             <div className="feature-card glass lg:col-span-3 rounded-3xl p-8">
               <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
@@ -288,7 +288,7 @@ function App() {
                     <span className="text-blue-500 font-bold">{skill.value}</span>
                   </div>
                   <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5 overflow-hidden">
-                    <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2.5 rounded-full" style={{ width: skill.value }}></div>
+                    <div className="bg-linear-to-br from-blue-500 to-cyan-500 h-2.5 rounded-full" style={{ width: skill.value }}></div>
                   </div>
                 </div>
               ))}
@@ -313,8 +313,8 @@ function App() {
               <article key={job.id} className="feature-card glass rounded-3xl p-8">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center shrink-0">
+                      <svg className="w-5 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
@@ -337,7 +337,7 @@ function App() {
                 <ul className="space-y-3">
                   {job.responsibilities.map((responsibility, index) => (
                     <li key={index} className="flex gap-3 text-slate-600 dark:text-slate-300">
-                      <span className="mt-2.5 w-2 h-2 rounded-full bg-blue-500 flex-shrink-0 shadow-lg shadow-blue-500/40"></span>
+                      <span className="mt-2.5 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-lg shadow-blue-500/40"></span>
                       <span>{responsibility}</span>
                     </li>
                   ))}
@@ -382,8 +382,8 @@ function App() {
           <div className="grid md:grid-cols-2 gap-6">
             {education.map((item) => (
               <article key={item.id} className="feature-card glass rounded-3xl p-8">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/15 to-cyan-500/15 flex items-center justify-center mb-6">
-                  <svg className="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-blue-500/15 to-cyan-500/15 flex items-center justify-center mb-6">
+                  <svg className="w-5 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-3.004 12.078 12.078 0 01.665-6.479L12 14z" />
                   </svg>
@@ -439,8 +439,8 @@ function App() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {skills.map((skill, index) => (
-              <div key={index} className="skill-card glass rounded-3xl p-5 flex flex-col items-center justify-center text-center min-h-[150px]">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/15 to-cyan-500/15 flex items-center justify-center mb-3">
+              <div key={index} className="skill-card glass rounded-3xl p-5 flex flex-col items-center justify-center text-center min-h-37.5">
+                <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-blue-500/15 to-cyan-500/15 flex items-center justify-center mb-3">
                   <img src={skill.icon} alt={skill.name} className="w-8 h-8" />
                 </div>
                 <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">{skill.name}</span>
@@ -484,7 +484,7 @@ function App() {
             <div className="grid sm:grid-cols-2 gap-4">
               <a href="tel:+2347040602452" className="contact-card glass rounded-3xl p-6 group">
                 <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
@@ -495,7 +495,7 @@ function App() {
 
               <a href="mailto:johnjoshuaaaaaa@gmail.com" className="contact-card glass rounded-3xl p-6 group">
                 <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
@@ -506,7 +506,7 @@ function App() {
 
               <a href="https://github.com/JoexSeven7" target="_blank" rel="noopener noreferrer" className="contact-card glass rounded-3xl p-6 group">
                 <div className="w-12 h-12 rounded-2xl bg-slate-700 flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                   </svg>
                 </div>
@@ -517,7 +517,7 @@ function App() {
 
               <a href="https://www.linkedin.com/in/john-joshua-ink" target="_blank" rel="noopener noreferrer" className="contact-card glass rounded-3xl p-6 group">
                 <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                   </svg>
                 </div>
@@ -533,7 +533,7 @@ function App() {
       {/* Footer */}
       <footer className="relative overflow-hidden bg-slate-950 text-slate-300">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.22),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(6,182,212,0.18),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(99,102,241,0.16),transparent_35%)]"></div>
-        <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(rgba(148,163,184,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.8)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+        <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(rgba(148,163,184,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.8)_1px,transparent_1px)] bg-size-[48px_48px]"></div>
 
         <div className="relative max-w-6xl mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8 items-center">
