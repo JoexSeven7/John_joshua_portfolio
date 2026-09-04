@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import ProjectCard from './components/ProjectCard';
-import { education, experience, projects, skills } from './data/projects';
+import { education, experience, projects, skills, fullstackSkills } from './data/projects';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -14,6 +14,7 @@ function App() {
   const navItems = [
     { label: "Home", id: "hero" },
     { label: "About", id: "about" },
+    { label: "Full-Stack Path", id: "fullstack" },
     { label: "Experience", id: "experience" },
     { label: "Education", id: "education" },
     { label: "Projects", id: "projects" },
@@ -168,7 +169,7 @@ function App() {
               </h1>
 
               <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-4 max-w-2xl mx-auto lg:mx-0">
-                I'm John Joshua, a Frontend Developer who turns ideas into clean, responsive, and user-friendly digital experiences.
+                I'm John Joshua, a Fullstack Developer who turns ideas into clean, responsive, and user-friendly digital experiences.
               </p>
 
               <p className="text-base text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0">
@@ -293,6 +294,99 @@ function App() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-Stack Transition Section */}
+      <section id="fullstack" className="section-shell relative py-24 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="section-kicker">Career Evolution</span>
+            <h2 className="section-title mt-4">From Frontend to Full-Stack</h2>
+            <p className="section-subtitle">
+              Expanding my craft beyond the UI — building APIs, owning data, and shipping production systems end-to-end.
+            </p>
+          </div>
+
+          <div className="feature-card glass rounded-3xl p-8 md:p-10 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-300 mb-6 shadow-lg">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+              Currently Learning
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-white mb-4">
+              Building the other half of the stack.
+            </h3>
+            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+              I'm a frontend developer stepping into the backend world — learning to design REST APIs, model data in PostgreSQL, containerize with Docker, and deploy real services to the cloud. Same discipline, broader surface area.
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              {fullstackSkills.map((skill, index) => (
+                <div key={index} className="skill-card glass rounded-3xl p-5 flex flex-col items-center justify-center text-center min-h-37.5">
+                  <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-blue-500/15 to-cyan-500/15 flex items-center justify-center mb-3">
+                    <img src={skill.icon} alt={skill.name} className="w-8 h-8" />
+                  </div>
+                  <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <article className="feature-card glass rounded-3xl p-8">
+              <div className="flex items-start gap-4 mb-5">
+                <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center shrink-0">
+                  <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-blue-500 font-semibold text-sm uppercase tracking-wider">Now</p>
+                  <h3 className="text-xl font-bold text-slate-800 dark:text-white">Foundations in Progress</h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-slate-600 dark:text-slate-300">
+                {[
+                  "Backend fundamentals with Node.js & Express",
+                  "SQL & PostgreSQL schema design",
+                  "REST API design & error handling",
+                  "Authentication with JWT & OAuth 2.0"
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="mt-2.5 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-lg shadow-blue-500/40"></span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="feature-card glass rounded-3xl p-8">
+              <div className="flex items-start gap-4 mb-5">
+                <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 flex items-center justify-center shrink-0">
+                  <svg className="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-cyan-500 font-semibold text-sm uppercase tracking-wider">Next</p>
+                  <h3 className="text-xl font-bold text-slate-800 dark:text-white">Shipping to Production</h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-slate-600 dark:text-slate-300">
+                {[
+                  "Dockerize apps & orchestrate with Compose",
+                  "CI/CD pipelines with GitHub Actions",
+                  "Deploy to AWS / Render with a real domain",
+                  "Observability: structured logs & monitoring"
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="mt-2.5 w-2 h-2 rounded-full bg-cyan-500 shrink-0 shadow-lg shadow-cyan-500/40"></span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
           </div>
         </div>
       </section>
