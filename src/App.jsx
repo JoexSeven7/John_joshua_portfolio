@@ -160,7 +160,7 @@ function App() {
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-300 mb-6 shadow-lg">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                Frontend Developer
+                Fullstack Developer
               </div>
 
               <h1 className="hero-gradient-text text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6">
