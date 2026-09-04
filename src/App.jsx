@@ -56,7 +56,7 @@ function App() {
                 <p className="text-base font-black leading-none text-slate-900 dark:text-white">
                   John<span className="text-blue-500">Joshua</span>
                 </p>
-                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">Frontend Developer</p>
+                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">Fullstack Developer</p>
               </div>
             </button>
 
